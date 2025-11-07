@@ -108,4 +108,56 @@ vim.api.nvim_create_autocmd("CursorHold", {
   end,
 })
 
+-- Vimrc converted to lua
+vim.opt.modelines = 0
+vim.opt.clipboard = "unnamed"
 
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.ruler = false
+
+vim.opt.encoding = "utf-8"
+
+-- indentation
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftround = true
+
+-- auto-indentation / formatting
+vim.opt.autoindent = true
+vim.opt.cindent = true
+vim.opt.cinoptions = "l1,g0,t0,(0,W4,:4"
+
+-- cursor
+vim.opt.scrolloff = 8
+vim.opt.cursorline = true
+
+vim.opt.hidden = true
+vim.opt.ttyfast = true
+vim.opt.laststatus = 2
+
+vim.opt.showmode = true
+vim.opt.showcmd = true
+
+-- searching
+vim.opt.hlsearch = true
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.showmatch = false
+
+vim.opt.wildmenu = true
+
+-- mouse
+vim.opt.mouse = "a"
+
+-- keymaps
+vim.keymap.set("n", "<leader>ef", ":Ex<CR>", { noremap = true })
+vim.keymap.set("n", "<leader>ws", [[:%s/\s\+$//e<CR>:noh<CR>]], { noremap = true })
+
+-- netrw settings
+vim.g.netrw_banner = 0
+vim.g.netrw_list_hide = ".*\\.swp$,.DS_Store,*/tmp/*,*.so,*.swp,*.zip,*.git,^\\./$"
+vim.g.netrw_bufsettings = "noma nomod nobl nowrap ro"
